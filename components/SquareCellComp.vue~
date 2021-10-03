@@ -1,0 +1,17 @@
+<template>
+  <g @click="open()">
+    <path :d="cell.path()" :fill="cell.color()" stroke="black"></path>
+  </g>
+</template>
+
+<script lang="ts">
+
+import { Component, Prop, Vue } from 'vue-property-decorator';
+import {SquareCell} from "@/model/SquareCell";
+import CellComp from "@/components/CellComp.ts";
+
+@Component
+export default class SquareCellComp extends CellComp<Square>{
+}
+
+</script>
